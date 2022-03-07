@@ -12,9 +12,7 @@ let ScontoOver65 = (PrezzoBiglietto * 40 / 100 );
 
 //console.log('PrezzoBiglietto');
 
-
-
- if(EtàPasseggero <= 18){
+if(EtàPasseggero <= 18){
     console.log('Sei minorenne, hai uno sconto del 20%')
     
 
@@ -38,35 +36,3 @@ let ScontoOver65 = (PrezzoBiglietto * 40 / 100 );
 
  }
 
-
-if(!isNaN(Percorso) && !isNaN(EtàPasseggero)){
-
-   if(EtàPasseggero <= 18){
-      console.log('Sei minorenne, hai uno sconto del 20%');
-      
-  
-     let  PrezzoTotale = (PrezzoBiglietto - ScontoMin ).toFixed(2);
-  
-     document.getElementById("PrezzoTotale").innerHTML = "Il prezzo finale è: "+PrezzoTotale+"€ ";
-  
-     }else if(EtàPasseggero >= 65){
-      console.log('hai uno sconto del 40%');
-  
-      let  PrezzoTotale = (PrezzoBiglietto - ScontoOver65 ).toFixed(2);
-      
-      document.getElementById("PrezzoTotale").innerHTML = "Il prezzo finale è: "+PrezzoTotale+"€ ";
-  
-  
-      
-      }else {
-      console.log('il prezzo del biglietto è', PrezzoBiglietto + '€' );
-      document.getElementById("PrezzoTotale").innerHTML = "Il prezzo finale è: "+PrezzoBiglietto+"€ ";
-  
-  
-   }
-
-
-
-}else{
-   alert('hai inserito valori non numerici');
-}
